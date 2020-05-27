@@ -1,15 +1,37 @@
-## Put comments here that give an overall description of what your
-## functions do
+## Assignment 2 Week 3: "Caching the Inverse of a Matrix"
 
-## Write a short comment describing this function
+## Creating a special "matrix" 
 
 makeCacheMatrix <- function(x = matrix()) {
-
+  
+  m<-NULL
+  
+  set<-function(y){
+    x<<-y
+    
+    m<<-NULL
+    
+    
+  }
+get<-function()x
+setInverse<-function(inverse) m<<-inverse
+getInverse<-function()j
+list(set = set, get=get, setInverse= setInverse, getInverse=getInverse)
+  
 }
 
 
-## Write a short comment describing this function
+## Creating the cache of the special "matrix"
 
 cacheSolve <- function(x, ...) {
-        ## Return a matrix that is the inverse of 'x'
+        
+  m <- x$getInverse()
+  if(!is.null(mj)){
+    message("cache data")
+    return(m)
+  }
+  mat <- x$get()
+  m <- solve(mat,...)
+  x$setInverse(m)
+  m
 }
